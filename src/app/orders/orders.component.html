@@ -1,0 +1,100 @@
+      <!-- Navigation-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#!">EasyTicket</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Accueil </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Ventes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">A propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Cart
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="bg-image-hd py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Les commandes : </h1>
+                <p class="lead fw-normal text-white-50 mb-0">Fistival Fes musiques sacrées du monde</p>
+            </div>
+        </div>
+    </header>
+    <div class="py-3 bg-easy" >
+        <div class="container" >
+            
+        </div>
+    </div>
+    <!-- Section-->
+    <section class="py-5">
+        <div class="container mt-5" >
+            <div class="row">
+                <div  class="col-8" >
+                    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                        <!--- Note that these columns can be defined in any order.
+                              The actual rendered columns are set as a property on the row definition" -->
+                      
+                        <!-- Position Column -->
+                        <ng-container matColumnDef="position">
+                          <th class="bg-easy" mat-header-cell *matHeaderCellDef> No . </th>
+                          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                        </ng-container>
+                      
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="name">
+                          <th class="bg-easy" mat-header-cell *matHeaderCellDef> Info </th>
+                          <td mat-cell *matCellDef="let element"> <img class="p-2" [src]="element.img"> <span class="px-3">{{element.name}}</span> </td>
+                        </ng-container>
+                      
+                        <!-- Weight Column -->
+                        <ng-container matColumnDef="weight">
+                          <th class="bg-easy" mat-header-cell *matHeaderCellDef> Prix </th>
+                          <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                        </ng-container>
+                      
+                        <!-- Symbol Column -->
+                        <ng-container matColumnDef="img">
+                          <th class="bg-easy" mat-header-cell *matHeaderCellDef> Actions </th>
+                          <td mat-cell *matCellDef="let element"> <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+                            <mat-icon>delete</mat-icon>
+                          </button> </td>
+                        </ng-container>
+                      
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                      </table>
+                      
+                      
+                </div>
+                <div class="col-4" >
+                    <div class="card h-100 py-4 px-5 bg-easy">
+                        <div class="small mb-1">Lists</div>
+                        <p class="lead"> 300 Dhs  x 1   </p>
+                        <p class="lead"> 240 Dhs  x 1   </p>
+                        <p class="lead"> 402 Dhs  x 1   </p>
+                        <h1 style="color:#B88E2F;" class="display-5 fw-bolder"> Totals :  900 Dhs</h1>
+                        <div class="d-flex" >
+                            <button class="btn btn-outline-dark flex-shrink-0" style="color:#FFF; background-color: #B88E2F;" type="button">
+                               
+                                Commander 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+    </footer>

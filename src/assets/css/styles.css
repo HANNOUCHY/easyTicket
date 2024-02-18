@@ -7614,10 +7614,6 @@ textarea.form-control-lg {
   margin-top: 3rem !important;
 }
 
-.mt-6 {
-    margin-top: 5rem !important;
-}
-
 .mt-auto {
   margin-top: auto !important;
 }
@@ -8133,10 +8129,6 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-easy{
-    background-color:#FFF3E3;
-}
-
 .bg-secondary {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
@@ -8171,20 +8163,6 @@ textarea.form-control-lg {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
 }
-
-.bg-image {
-    --bs-bg-opacity: 1;
-    background-image: url(assets/assets/bg_fes.jpg);
-    background-repeat:round;
-    height: 500px;
-  }
-
-  .bg-image-hd {
-    --bs-bg-opacity: 1;
-    background-image: url(assets/assets/bg_fes_hd.jpg);
-    background-repeat:round;
-    height: 297px;
-  }
 
 .bg-black {
   --bs-bg-opacity: 1;
@@ -10846,5 +10824,3 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
